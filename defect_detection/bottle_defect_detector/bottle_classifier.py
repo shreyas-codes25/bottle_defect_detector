@@ -10,7 +10,7 @@ from tensorflow.keras.optimizers import Adam # type: ignore
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint # type: ignore
 
 # Paths
-data_dir = "E:/github project/defect_detection/bottle_defect_detector/Data"
+data_dir = "open in vs code , copy the path for Data folder and change '\' to '/'"
 model_path = "final_bottle_classifier.h5"
 
 # === TRAINING ===
@@ -70,7 +70,7 @@ def predict_realtime():
         return
 
     model = load_model(model_path)
-    cap = cv2.VideoCapture(2)
+    cap = cv2.VideoCapture(0)
 
     class_labels = ['Defective', 'Proper']
 
